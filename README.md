@@ -1,7 +1,6 @@
 # CellBio_SimpleStats
-Run simple statistical analyses on pre-formatted datasets (CSV format), downsample flow cytometry or gene expression raw data, 
-or reference mRNA sequencing rpkm datasets to pull data corresponding to an input 'hit list'.
-
+Run simple statistical analyses on pre-formatted datasets (CSV format), downsample flow cytometry or gene expression raw data, or reference mRNA sequencing rpkm datasets to pull data corresponding to an input 'hit list'.
+OneWayANOVApVals.R:
 Input .CSV datasets, where columns represent measurements of the same type, and rows represent measurements from the same individual (replicate measurements or average of technical replicates). Perform statistical tests, generating new .csv files with the p-values and f-values.
-
-In the early version of these code(s), the .CSV files must be formatted such that row 1, column 1 should read "Stim" (without the quotations), and the rest of column 1 should indicate the name of the experimental condition. Row 1 will then indicate the type of measurement (or be left blank).
+RandDownSampler.R:
+Function that reads a large dataset containing rows of potentially unrelated measurements linked to the same individual, and randomly downsamples that by a factor of X, generating a new .CSV file that contains only the downsampled events.
